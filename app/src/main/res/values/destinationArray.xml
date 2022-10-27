@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="destination">
+        <item>목적지 설정</item>
+        <item>상명대학교</item>
+        <item>명지대학교</item>
+        <item>국민대학교</item>
+    </string-array>
+</resources>
