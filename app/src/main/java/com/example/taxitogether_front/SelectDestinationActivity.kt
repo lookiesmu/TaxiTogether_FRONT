@@ -1,18 +1,32 @@
 package com.example.taxitogether_front
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import kotlinx.android.synthetic.main.activity_select_destination_page.*
+import com.example.taxitogether_front.databinding.ActivitySelectDestinationBinding
+import kotlinx.android.synthetic.main.activity_select_destination.*
 
-class selectDestinationPage : AppCompatActivity() {
+class SelectDestinationActivity : AppCompatActivity() {
+
+    lateinit var binding : ActivitySelectDestinationBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select_destination_page)
+// intent 전환
+        binding = ActivitySelectDestinationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.completeButton.setOnClickListener {
+            val intent = Intent(this, LoadingActivity::class.java)
+            startActivity(intent)
+        }
+
+         // intent 전환
 
         val items = resources.getStringArray(R.array.sources)
         val myAdapter1 = ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,items)

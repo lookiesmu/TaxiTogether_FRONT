@@ -21,15 +21,9 @@
         <item name="android:textStyle">bold</item>
     </style>
     <!-- Splash theme. -->
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-
-        <!-- No Title Bar-->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <!-- white status bar -->
-        <item name="android:statusBarColor">@color/white</item>
-        <!-- background -->
-        <item name="android:windowBackground">@drawable/splash</item>
+    <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/white</item>
     </style>
 </resources>
