@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity(){
 
         binding.loginBtn.setOnClickListener {
             // id pw가 맞으면 탈퇴처리하고 login 화면으로
-            val intent = Intent(this,LoadingActivity::class.java)
+            val intent = Intent(this,SelectDestinationActivity::class.java)
             startActivity(intent)
         }
     }
